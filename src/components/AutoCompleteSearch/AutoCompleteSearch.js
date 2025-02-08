@@ -5,12 +5,18 @@ const AutoCompleteSearch = () => {
   const [input, setInput] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [isShow, setIsShow] = useState(false);
+  const [cache, setCache] = useState({});
 
   const fetchData = async () => {
     try {
+      if(cache[input]){
+        setSuggestions(cache[input])
+        return;
+      }
       const data = await fetch(`http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=${input}`);
       const res = await data.json();
       setSuggestions(res[1]);
+      setCache((prev) => ({...prev, [input]:res[1]}))
     } catch (error) {
       console.log("Fetching Error", error);
     }
