@@ -48,7 +48,6 @@ const AutoCompleteSearch = () => {
             </div>
           ))}
         </div> : "" }
-       
       </div>
     </div>
   );
