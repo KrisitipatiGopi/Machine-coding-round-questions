@@ -1,0 +1,37 @@
+.mainContainer {
+    background-color: rgb(230, 215, 215);
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.search_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-box {
+    height: 30px;
+    width: 500px;
+    padding: 5px;
+}
+.heading{
+    color: rgb(153, 63, 63);
+}
+.suggestionsContainer{
+    text-align: left;
+    background-color: white;
+    margin: auto;
+    width: 500px;
+    list-style-type: none;
+}
+.item{
+    margin: 2px;
+}
+.item:hover{
+    background-color: gainsboro;
+}
